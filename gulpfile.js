@@ -22,7 +22,7 @@ gulp.task('browser-sync', function() {
 		server: {
 			baseDir: 'app'
 		},
-		notify: false
+		notify: true
 	});
 });
 
@@ -75,7 +75,7 @@ gulp.task('imagemin', function() {
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
 		})))
-		.pipe(gulp.dest('dist/img')); 
+		.pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('buildhtml', function() {
