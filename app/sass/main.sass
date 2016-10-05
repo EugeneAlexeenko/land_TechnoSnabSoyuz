@@ -11,7 +11,8 @@
 .top-line
   .logo
     padding: 11px 0
-    margin: 0 auto
+    //margin: 0 auto
+
   .contacts__phone
     padding-top: 18px
     margin-bottom: 8px
@@ -37,17 +38,18 @@
     margin-top: 40px
     text-align: center
     a
+      padding-bottom: 5px
       font-size: 14px
       line-height: 14px
       font-weight: 500
       color: #d12435
+      border-bottom: 1px dashed #d12435
+    a:hover,
+    a:focus
+      text-decoration: none
   .call-me
-    //position: relative
     margin-top: 30px
-    //text-align: center
     button
-      //position: absolute
-      //top: 50%
       display: block
       width: 220px
       height: 40px
@@ -58,6 +60,42 @@
       border: 2px solid #d12435
       border-radius: 20px
       text-decoration: none
-
+//main-navigation
+.main-navigation
+  background-color: #222
+.main-navigation__wrap
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  min-height: 50px
+.main-navigation__item:hover
+  background-color: #c2c2c2
+.main-navigation__item
+  position: relative
+  flex-grow: 1
+  flex-shrink: 1
+  display: inline-block
+  text-align: center
+  a
+    font-size: 12px
+    font-weight: 400
+    color: #fff
+  a:hover,
+  a:focus
+    text-decoration: none
+    color: #d12435
+.main-navigation__item::after
+  position: absolute
+  content: ''
+  top: 12px
+  right: -2px
+  width: 4px
+  height: 4px
+  background-color: #d12435
+  border-radius: 50%
+.main-navigation__item:last-child::after
+  display: none
 
 @import "media"
