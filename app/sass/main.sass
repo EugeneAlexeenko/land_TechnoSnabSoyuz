@@ -1,11 +1,36 @@
-@import "bourbon"
-@import "vars"
-@import "libs"
+@import 'bourbon'
+@import 'vars'
+@import 'libs'
 
 //Custom styles here
 
 .brd
-  outline: 1px solid red
+  outline: 1px solid #e75517
+
+@mixin btn($width, $height)
+  display: inline-block
+  width: $width
+  height: $height
+  font-size: 14px
+  font-weight: 700
+  border: none
+  border-radius: $height/2
+  text-decoration: none
+  text-transform: uppercase
+
+.btn--top-line
+  @include btn(220px, 40px)
+  font-weight: 400
+  background-color: #fff
+  color: #262626
+  border: 2px solid #d12435
+  text-transform: none
+.btn--top-line:hover
+  background-color: #d12435
+  color: #fff
+  transition: 0.3s
+
+
 
 //top-line
 .top-line
@@ -49,17 +74,7 @@
       text-decoration: none
   .call-me
     margin-top: 30px
-    button
-      display: block
-      width: 220px
-      height: 40px
-      font-size: 14px
-      font-weight: 400
-      background-color: #fff
-      color: #262626
-      border: 2px solid #d12435
-      border-radius: 20px
-      text-decoration: none
+
 //main-navigation
 .main-navigation
   background-color: #222
@@ -70,12 +85,9 @@
   align-items: center
   justify-content: space-between
   min-height: 50px
-.main-navigation__item:hover
-  background-color: #c2c2c2
 .main-navigation__item
   position: relative
   flex-grow: 1
-  flex-shrink: 1
   display: inline-block
   text-align: center
   a
@@ -97,5 +109,45 @@
   border-radius: 50%
 .main-navigation__item:last-child::after
   display: none
+
+//top-banner
+.top-banner
+  width: 100%
+  height: 500px
+  background-image: url(../img/bg-header-1.jpg)
+  background-repeat: no-repeat
+  background-position: center center
+.top-banner__content
+  display: flex
+  flex-direction: column
+  //align-items: center
+  text-align: center
+  padding-top: 90px
+.top-banner__content
+  h1
+    margin-bottom: 20px
+    font-family: 'pfagoraslabpro', sans-serif
+    text-transform: uppercase
+    font-size: 40px
+    line-height: 50px
+    color: #fff
+    font-weight: 900
+  span
+    padding: 2px 20px
+    background-color: #e8474b
+  p
+    margin-bottom: 65px
+    font-size: 24px
+    line-height: 30px
+    font-weight: 500
+    color: #fff
+.btn--top-banner
+  @include btn(460px, 54px)
+  align-self: center
+  background-color: #d12435
+  color: #fff
+.btn--top-banner:hover
+  background-color: #af2432
+  transition: 0.3s
 
 @import "media"
