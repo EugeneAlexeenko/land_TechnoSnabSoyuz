@@ -211,11 +211,61 @@
   span
     font-weight: 700
 .services__item
-  text-align: center
   p
     font-family: 'pfagoraslabpro', sans-serif
     font-weight: 700
     line-height: 21px
+    text-align: center
+.services__img-wrapper
+  display: flex
+  min-height: 160px
+  justify-content: center
+  align-items: center
 
+//main-footer
+.main-footer
+  .main-footer__map
+    display: flex
+    //flex-direction: сolumn
+    justify-content: center
+    height: 550px
+    background: url('../img/map.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    .contacts
+      width: 500px
+      height: 240px
+      position: relative
+      padding: 36px 30px 5px 30px
+      text-align: center
+      background-color: #e8474b
+      h2
+        color: #fff
+      p
+        color: #fff
+        line-height: 26px
+      .call-link
+        font-weight: 700
+        color: #fff
+        border-bottom: 1px dashed #fff
+      .call-link:focus,
+      .call-link:hover
+        text-decoration: none
+    .contacts::after
+      position: absolute
+      left: 0
+      bottom: -40px
+      content: ''
+      width: 0
+      height: 0
+      border-left: 250px solid transparent
+      border-right: 250px solid transparent
+      border-top: 40px solid #e8474b
 
+  .bottom-line
+    padding: 16px 0
+    font-size: 14px
+    background-color: #222
+    color: #888
+    text-align: center
 @import "media"
