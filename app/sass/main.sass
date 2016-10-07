@@ -11,24 +11,24 @@
   display: inline-block
   width: $width
   height: $height
-  font-size: 14px
   font-weight: 700
-  border: none
-  border-radius: $height/2
+  font-size: 14px
+  border: 0
+  border-radius: $height / 2
   text-decoration: none
   text-transform: uppercase
 
 .btn--top-line
   @include btn(220px, 40px)
   font-weight: 400
-  background-color: #fff
   color: #262626
+  background-color: #fff
   border: 2px solid #d12435
   text-transform: none
-.btn--top-line:hover
-  background-color: #d12435
-  color: #fff
-  transition: 0.3s
+  &:hover
+    color: #fff
+    background-color: #d12435
+    transition: .3s
 
 
 
@@ -42,9 +42,10 @@
     padding-top: 18px
     margin-bottom: 8px
     text-align: right
-    font-size: 24px
     line-height: 24px
+    font-size: 24px
     font-weight: 700
+
   .contacts__comment
     margin-top: 0
     margin-bottom: 5px
@@ -52,6 +53,7 @@
     font-size: 12px
     line-height: 12px
     color: #999
+
   .contacts__workTime
     margin-top: 0
     margin-bottom: 5px
@@ -59,6 +61,7 @@
     font-size: 14px
     line-height: 14px
     font-weight: 500
+
   .map-link
     margin-top: 40px
     text-align: center
@@ -80,11 +83,11 @@
   background-color: #222
 .main-navigation__wrap
   display: flex
+  min-height: 50px
   flex-direction: row
   flex-wrap: wrap
   align-items: center
   justify-content: space-between
-  min-height: 50px
 .main-navigation__item
   position: relative
   flex-grow: 1
