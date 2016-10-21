@@ -33,7 +33,7 @@ gulp.task('sass', ['headersass'], function() {
 		}).on("error", notify.onError()))
 		.pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(autoprefixer(['last 15 versions']))
-		.pipe(cleanCSS())
+		//.pipe(cleanCSS())
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({stream: true}))
 });
@@ -53,6 +53,7 @@ gulp.task('headersass', function() {
 gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+    'app/libs/slick-1.6.0/slick/slick.min.js'
 		// 'app/libs/magnific-popup/magnific-popup.min.js'
 		])
 		.pipe(concat('libs.min.js'))
@@ -80,9 +81,9 @@ gulp.task('imagemin', function() {
 
 gulp.task('buildhtml', function() {
   gulp.src(['app/*.html'])
-    .pipe(fileinclude({
-      prefix: '@@'
-    }))
+    // .pipe(fileinclude({
+    //   prefix: '@@'
+    // }))
     .pipe(gulpRemoveHtml())
     .pipe(gulp.dest('dist/'));
 });

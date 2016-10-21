@@ -1,42 +1,14 @@
 @import 'bourbon'
 @import 'vars'
 @import 'libs'
+@import 'base'
 
 //Custom styles here
-
-.brd
-  outline: 1px solid #e75517
-
-@mixin btn($width, $height)
-  display: inline-block
-  width: $width
-  height: $height
-  font-weight: 700
-  font-size: 14px
-  border: 0
-  border-radius: $height / 2
-  text-decoration: none
-  text-transform: uppercase
-
-.btn--top-line
-  @include btn(220px, 40px)
-  font-weight: 400
-  color: #262626
-  background-color: #fff
-  border: 2px solid #d12435
-  text-transform: none
-  &:hover
-    color: #fff
-    background-color: #d12435
-    transition: .3s
-  
 
 //top-line
 .top-line
   .logo
     padding: 11px 0
-    //margin: 0 auto
-
   .contacts__phone
     padding-top: 18px
     margin-bottom: 8px
@@ -44,7 +16,6 @@
     line-height: 24px
     font-size: 24px
     font-weight: 700
-
   .contacts__comment
     margin-top: 0
     margin-bottom: 5px
@@ -52,7 +23,6 @@
     font-size: 12px
     line-height: 12px
     color: #999
-
   .contacts__workTime
     margin-top: 0
     margin-bottom: 5px
@@ -60,7 +30,6 @@
     font-size: 14px
     line-height: 14px
     text-align: right
-
   .map-link
     margin-top: 40px
     text-align: center
@@ -76,6 +45,18 @@
       text-decoration: none
   .call-me
     margin-top: 30px
+
+.btn-top-line
+  @include default-btn(220px, 40px)
+  font-weight: 400
+  color: #262626
+  background-color: #fff
+  border: 2px solid #d12435
+  text-transform: none
+  &:hover
+    color: #fff
+    background-color: #d12435
+    transition: .3s
 
 //main-navigation
 .main-navigation
@@ -114,18 +95,33 @@
 
 //top-banner
 .top-banner
-  width: 100%
+  position: relative
+  margin: 0
+.top-banner__slider
   height: 500px
-  background-image: url(../img/bg-header-1.jpg)
+  margin: 0
+.top-banner__slide
+  height: 500px
+  opacity: .9
   background-repeat: no-repeat
-  background-position: center center
+  background-size: cover
+.top-banner__slide--1
+  background: url(../img/bg_header-1.jpg)
+  background-position: center
+.top-banner__slide--2
+  background: url(../img/bg_header-2.jpg)
+  background-position: center
+.top-banner__slide--3
+  background: url(../img/bg_header-3.jpg)
+  background-position: center
 .top-banner__content
   display: flex
   flex-direction: column
-  //align-items: center
   text-align: center
   padding-top: 90px
 .top-banner__content
+  position: absolute
+  top: 0
   h1
     margin-bottom: 20px
     font-family: 'pfagoraslabpro', sans-serif
@@ -144,14 +140,8 @@
     font-weight: 500
     color: #fff
 .btn--top-banner
-  @include btn(460px, 54px)
+  @include form-btn(460px, 54px)
   align-self: center
-  background-color: #d12435
-  color: #fff
-.btn--top-banner:hover
-  background-color: #af2432
-  transition: 0.3s
-
 
 //advantages section
 .advantages
@@ -225,28 +215,42 @@
   align-items: center
 
 
-//form-request
-.form-request
-  padding: 78px 0
+//request
+.request
+  padding: 75px 0
   background: url('../img/bg_request-form.jpg')
   background-repeat: no-repeat
   background-position: center center
-  .form-request__header
+  background-size: cover
+  &__header
+    margin-top: 0
     margin-bottom: 15px
     text-align: center
     color: #fff
     span
       color: #e8474b
-  .form-request__description
+  &__description
     margin-bottom: 36px
     color: #fff
     text-align: center
-  input
-    width: 100%
+
+.request-form
+  &__input
+    @include form-field(100%, 54px)
+    padding-left: 25px
+    font-size: 14px
+    color: #818181
+    border: 1px solid #999
+  &__btn
+    @include form-btn(100%, 54px)
+    background-color: $btn-red-bg
+    color: #fff
+    &:hover
+      background-color: $btn-red-bg-hover
 
 //main-footer
 .main-footer
-  .main-footer__map
+  &__map
     display: flex
     //flex-direction: сolumn
     justify-content: center
@@ -283,11 +287,11 @@
       border-left: 250px solid transparent
       border-right: 250px solid transparent
       border-top: 40px solid #e8474b
-
   .bottom-line
     padding: 16px 0
     font-size: 14px
     background-color: #222
     color: #888
     text-align: center
-@import "media"
+
+//@import 'media'

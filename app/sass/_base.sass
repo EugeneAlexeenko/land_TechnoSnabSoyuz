@@ -25,12 +25,12 @@ body textarea:required:valid
   color: #666
 
 body
-  font-size: 16px
   min-width: 320px
   position: relative
-  line-height: 1.6
-  font-family: $default-font
   font-weight: 400
+  font-family: $default-font
+  font-size: 16px
+  line-height: 1.6
   color: #262626
   overflow-x: hidden
 
@@ -38,9 +38,58 @@ h2
   margin: 0
   font-weight: 700
   font-size: 32px
-  font-family: "pfagoraslabpro", sans-serif
+  font-family: $pfagoraslabpro-font
   line-height: 42px
   text-transform: uppercase
 
-button:focus
-	outline: none
+@mixin default-btn($width, $height)
+  display: inline-block
+  width: $width
+  height: $height
+  font-weight: 700
+  font-size: 14px
+  border: 0
+  border-radius: $height / 2
+  text-decoration: none
+  text-transform: uppercase
+  &:hover
+    transition: .3s
+  &:focus
+    outline: none
+
+@mixin form-btn($width, $height)
+  display: inline-block
+  width: $width
+  height: $height
+  font-weight: 700
+  font-size: 14px
+  border: 0
+  border-radius: $height / 2
+  text-decoration: none
+  text-transform: uppercase
+  background-color: #d12435
+  color: #fff
+  &:hover
+    background-color: #af2432
+    transition: .3s
+  &:focus
+    outline: none
+
+@mixin form-field($width, $height)
+  display: inline-block
+  width: $width
+  height: $height
+  font-weight: 700
+  font-size: 14px
+  border: 0
+  border-radius: $height / 2
+  text-decoration: none
+  text-transform: uppercase
+  &::-webkit-input-placeholder
+    opacity: 1
+    transition: opacity .5s
+  &:focus
+    outline: none
+  &:focus::-webkit-input-placeholder
+    opacity: 0
+    transition: .5s

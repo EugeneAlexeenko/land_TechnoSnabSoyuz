@@ -61,43 +61,44 @@
 <body>
 
   <!-- Custom HTML -->
-  <header class="main-header">
-    <!-- begin top-line -->
-    <div class="top-line">
-      <div class="container">
+<header class="main-header">
+  <!-- begin top-line -->
+  <div class="top-line">
+    <div class="container">
       <div class="row">
 
-          <div class="col-md-2">
-            <div class="logo">
-              <a href="#">
-                <img src="../img/logo.png" alt="ТехноСнабСоюз" width="140px" height="78px">
-              </a>
-            </div>
+        <div class="col-md-2">
+          <div class="logo">
+            <a href="#">
+              <img src="../img/logo.png" alt="ТехноСнабСоюз" width="140px" height="78px">
+            </a>
           </div>
-
-          <div class="col-md-4">
-            <div class="contacts__phone">8-800-222-8042</div>
-            <div class="contacts__comment">(Бесплатно для звонков по РФ)</div>
-            <div class="contacts__workTime">Работаем ежедневно с 09 до 38</div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="map-link">
-              <a href="#contacts">Офис в Новосибирске</a>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="call-me">
-              <button class="btn--top-line" type="submit">Заказать звонок</a>
-            </div>
-          </div>
-
         </div>
+
+        <div class="col-md-4">
+          <div class="contacts__phone">8-800-222-8042</div>
+          <div class="contacts__comment">(Бесплатно для звонков по РФ)</div>
+          <div class="contacts__workTime">Работаем ежедневно с 09 до 38</div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="map-link">
+            <a href="#contacts">Офис в Новосибирске</a>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="call-me">
+            <button class="btn-top-line" type="submit">Заказать звонок</a>
+          </div>
+        </div>
+
       </div>
     </div>
-    <!-- end top-line -->
-  <!-- begin navigation -->
+  </div>
+  <!-- end top-line -->
+
+  <!-- begin main-navigation -->
   <nav class="main-navigation">
     <div class="container">
       <div class="main-navigation__wrap">
@@ -113,21 +114,28 @@
       </div>
     </div>
   </nav>
-  <!-- end navigation -->
+  <!-- end main-navigation -->
+
   <!-- begin top-banner -->
   <div class="top-banner">
-    <div class="container">
-      <div class="top-banner__content">
+    <div class="top-banner__slider">
+      <div class="top-banner__slide top-banner__slide--1"></div>
+      <div class="top-banner__slide top-banner__slide--2"></div>
+      <div class="top-banner__slide top-banner__slide--3"></div>
+    </div>
+
+    <div class="top-banner__content">
+      <div class="container">
         <h1><span>Полный комплекс кровельных</span><br>
           <span>работ c гарантией 10 лет</span></h1>
         <p>Сэкономьте время и деньги, получив весь комплекс кровельных
            работ от проектирования и поставки материалов до монтажа... </p>
         <button class="btn--top-banner" type="submit">Бесплатно рассчитать стоимость работ</button>
       </div>
-    </div>
+    </div> <!-- end top-banner__content -->
   </div>
   <!-- end top-banner -->
-  </header>
+</header>
 
 <!-- section advantages begin -->
 <section class="advantages" id="advantages">
@@ -194,7 +202,7 @@
     <h2 class="services__header">Наши <span>услуги</span></h2>
     <p class="services__description">Выполним любые работы, связанные с ремонтом и монтажом кровельных систем в кротчайшие сроки. <br>
     У Вас есть вопросы или Вы хотите рассчитать стоимость работ и материала? <br>
-Позвоните нам прямо сейчас: <span>8-800-222-8042</span></p>
+    Позвоните нам прямо сейчас: <span>8-800-222-8042</span></p>
     <div class="col-md-4">
       <div class="services__item">
         <div class="services__img-wrapper">
@@ -223,32 +231,32 @@
 </section>
 <!-- section services end -->
 
-<!-- section form-request  -->
-<section class="form-request">
+<!-- section request  -->
+<section class="request">
   <div class="container">
-    <h2 class="form-request__header">Отправьте заявку и получите <span>бесплатный
+    <h2 class="request__header">Отправьте заявку и получите <span>бесплатный
       расчет стоимости</span> в нескольких вариантах</h2>
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <p class="form-request__description">Для Вас мы бесплатно проведем расчет стоимости материалов и работ по каждому этапу строительства.</p>
+        <p class="request__description">Для Вас мы бесплатно проведем расчет стоимости материалов и работ по каждому этапу строительства.</p>
       </div>
     </div>
     <div class="row">
-      <form action="" method="get" name="form-request">
+      <form class="request-form" action="" method="get" name="request-form">
         <div class="col-md-4">
-          <input type="text" placeholder="Номер телефона*" name="phone">
+          <input class="request-form__input" type="text" placeholder="Номер телефона" name="phone">
         </div>
         <div class="col-md-4">
-          <input type="text" placeholder="Электронная почта*" name="email">
+          <input class="request-form__input" type="text" placeholder="Электронная почта" name="email">
         </div>
         <div class="col-md-4">
-          <input type="submit" value="Оставить заявку">
+          <input class="request-form__btn" type="button" value="Оставить заявку">
         </div>
       </form>
     </div>
   </div>
 </section>
-<!-- section form-request  -->
+<!-- section request  -->
 
 <!-- footer begin-->
 <footer class="main-footer">

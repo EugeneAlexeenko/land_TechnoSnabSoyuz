@@ -20,20 +20,28 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+  .main-footer
+    &__map
+      .contacts::after
+        border-left: 240px solid transparent
+        border-right: 240px solid transparent
 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
-
+  .main-footer
+    &__map
+      .contacts
+        height: 250px
+      .contacts::after
+        border-left: 160px solid transparent
+        border-right: 160px solid transparent
 
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	/**/
-
+  /**/
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
@@ -53,4 +61,3 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
-
