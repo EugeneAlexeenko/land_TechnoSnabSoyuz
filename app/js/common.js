@@ -8,4 +8,50 @@ $(document).ready(function(){
     fade: true,
     pauseOnFocus: false
   });
+
+  $('.awards-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: false,
+    dots: true,
+    autoplay: false,
+    autoplaySpeed: 4000,
+    speed: 300,
+    fade: false,
+    pauseOnFocus: false,
+    responsive:[{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        touchThreshold: 8,
+        dots: true
+      }
+    }]
+  });
+
+  var wow = new WOW(
+    {
+      mobile: false,
+      callback: function(){
+        console.log('animation detected');
+      }
+    }
+  );
+  wow.init();
 });
