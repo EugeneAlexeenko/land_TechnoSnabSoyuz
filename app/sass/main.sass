@@ -219,6 +219,41 @@
   justify-content: center
   align-items: center
 
+//get-economy
+.get-economy
+  padding: 75px 0
+  background: url('../img/bg_get-price-form.jpg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  &__promo
+    margin-top: 0
+    margin-bottom: 35px
+    font-size: 26px
+    font-weight: 700
+    line-height: 32px
+    text-align: center
+    color: #fff
+    span
+      color: #e8474b
+      text-transform: uppercase
+
+.get-economy-form
+  &__input
+    @include form-field(100%, 54px)
+    margin-bottom: 10px
+    padding-left: 25px
+    font-size: 14px
+    color: #818181
+    border: 1px solid #999
+  &__btn
+    @include form-btn(100%, 54px)
+    margin-bottom: 10px
+    background-color: $btn-red-bg
+    color: #fff
+    &:hover
+      background-color: $btn-red-bg-hover
+
 //work
 .work__header
   margin-bottom: 50px
@@ -245,6 +280,60 @@
   font-size: 14px
   line-height: 21px
   text-align: center
+
+//get-price
+.get-price
+  padding: 75px 0
+  background: url('../img/bg_get-price-form.jpg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  &__header
+    margin-top: 0
+    margin-bottom: 15px
+    text-align: center
+    color: #fff
+    span
+      color: #e8474b
+  &__description
+    margin-bottom: 36px
+    font-size: 20px
+    font-weight: 500
+    line-height: 26px
+    color: #fff
+    text-align: center
+  &__text
+    margin-bottom: 36px
+    font-size: 14px
+    line-height: 21px
+    color: #fff
+    text-align: left
+  &__promo
+    margin-top: 0
+    margin-bottom: 35px
+    font-size: 26px
+    font-weight: 700
+    line-height: 32px
+    text-align: center
+    color: #fff
+    span
+      color: #e8474b
+      text-transform: uppercase
+
+.get-price-form
+  &__input
+    @include form-field(100%, 54px)
+    margin-bottom: 10px
+    padding: 0 25px
+    color: #818181
+    border: 1px solid #999
+  &__btn
+    @include form-btn(100%, 54px)
+    margin-bottom: 10px
+    background-color: $btn-red-bg
+    color: #fff
+    &:hover
+      background-color: $btn-red-bg-hover
 
 //partners
 .partners
@@ -434,12 +523,14 @@
 .request-form
   &__input
     @include form-field(100%, 54px)
+    margin-bottom: 10px
     padding-left: 25px
     font-size: 14px
     color: #818181
     border: 1px solid #999
   &__btn
     @include form-btn(100%, 54px)
+    margin-bottom: 10px
     background-color: $btn-red-bg
     color: #fff
     &:hover
