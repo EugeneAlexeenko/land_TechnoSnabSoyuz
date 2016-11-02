@@ -9,6 +9,10 @@
 .top-line
   .logo
     padding: 11px 0
+    a
+      display: block
+    img
+      margin: 0 auto
   .contacts__phone
     padding-top: 18px
     margin-bottom: 8px
@@ -74,6 +78,7 @@
   flex-grow: 1
   text-align: center
   a
+    padding: 0 5px
     font-size: 12px
     font-weight: 400
     color: #fff
@@ -115,24 +120,21 @@
   background: url(../img/bg_header-3.jpg)
   background-position: center
 .top-banner__content
-  display: flex
-  flex-direction: column
-  text-align: center
   padding-top: 90px
-.top-banner__content
   position: absolute
   width: 100%
   top: 0
   h1
-    margin-bottom: 20px
+    margin: 0
+    margin-bottom: 40px
     font-family: 'pfagoraslabpro', sans-serif
     text-transform: uppercase
     font-size: 40px
     line-height: 50px
     color: #fff
     font-weight: 900
+    text-align: center
   span
-    padding: 2px 20px
     background-color: #e8474b
   p
     margin-bottom: 65px
@@ -140,9 +142,11 @@
     line-height: 30px
     font-weight: 500
     color: #fff
+    text-align: center
 .btn--top-banner
   @include form-btn(460px, 54px)
-  align-self: center
+  display: block
+  margin: 0 auto
 
 //advantages section
 .advantages
@@ -214,6 +218,33 @@
   min-height: 160px
   justify-content: center
   align-items: center
+
+//work
+.work__header
+  margin-bottom: 50px
+  text-align: center
+  span
+    color: #e8474b
+.work-item
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.work-item__img-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 90px
+  height: 90px
+  text-align: center
+  margin-bottom: 20px
+  border: 4px solid #e8474b
+  border-radius: 50%
+.work-item__text
+  font-size: 14px
+  line-height: 21px
+  text-align: center
 
 //partners
 .partners
@@ -443,7 +474,7 @@
       .call-link:focus,
       .call-link:hover
         text-decoration: none
-    .contacts::after
+    //.contacts::after
       position: absolute
       left: 0
       bottom: -40px
@@ -460,4 +491,4 @@
     color: #888
     text-align: center
 
-//@import 'media'
+@import 'media'
